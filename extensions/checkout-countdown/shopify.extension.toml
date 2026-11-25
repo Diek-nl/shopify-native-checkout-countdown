@@ -1,0 +1,82 @@
+# Aftelklok in de checkout zonder countdown-app.
+# Gebouwd door Diek Thunnissen, DIEK (https://diek.nl)
+# https://github.com/Diek-nl/shopify-native-checkout-countdown · MIT
+#
+# Eén blok dat aftelt naar het einde van je actie: een gekleurd vlak met een kop, een regel
+# ("eindigt over") en vakjes voor dagen, uren, minuten en seconden. Geen backend, geen scopes,
+# geen netwerkverkeer. Na het einde toont het blok niets meer.
+#
+# Twee targets, één extensie:
+#  - purchase.checkout.block.render   → in de checkout (Shopify Plus)
+#  - purchase.thank-you.block.render  → op de bedankpagina (elk plan)
+api_version = "2026-01"
+
+[[extensions]]
+name = "Aftelklok"
+handle = "checkout-countdown"
+uid = "625ab711-c56c-4824-b856-cc739717723b"
+description = "Aftelklok naar het einde van je actie, in je eigen kleuren. Door DIEK, diek.nl"
+type = "ui_extension"
+
+  [[extensions.targeting]]
+  target = "purchase.checkout.block.render"
+  module = "./src/Countdown.tsx"
+
+  [[extensions.targeting]]
+  target = "purchase.thank-you.block.render"
+  module = "./src/Countdown.tsx"
+
+  [extensions.settings]
+    [[extensions.settings.fields]]
+    key = "einde"
+    type = "single_line_text_field"
+    name = "Einde van de actie"
+    description = "Verplicht. Datum en tijd met tijdzone, bijvoorbeeld 2026-12-01T00:00:00+01:00 (= 30 november 23:59 Nederlandse tijd; in de zomertijd +02:00). Leeg of onleesbaar = blok verborgen."
+
+    [[extensions.settings.fields]]
+    key = "kop"
+    type = "single_line_text_field"
+    name = "Kop"
+    description = "Leeg = Sale. Bijvoorbeeld: Black Friday sale."
+
+    [[extensions.settings.fields]]
+    key = "regel"
+    type = "single_line_text_field"
+    name = "Regel onder de kop"
+    description = "Leeg = 'eindigt over' in de taal van de klant (NL, EN, DE, FR). Een eigen tekst geldt voor alle talen."
+
+    [[extensions.settings.fields]]
+    key = "laatste_uren"
+    type = "number_integer"
+    name = "Alleen de laatste … uur tonen"
+    description = "Leeg of 0 = altijd tonen tot het einde. 24 = alleen de laatste dag."
+
+    [[extensions.settings.fields]]
+    key = "kleur_vlak"
+    type = "single_line_text_field"
+    name = "Kleur van het vlak"
+    description = "Hex-kleur, bijvoorbeeld #D21404. Leeg = #121212 (bijna zwart)."
+
+    [[extensions.settings.fields]]
+    key = "kleur_tekst"
+    type = "single_line_text_field"
+    name = "Kleur van de tekst"
+    description = "Hex-kleur. Leeg = #FFFFFF."
+
+    [[extensions.settings.fields]]
+    key = "kleur_vakjes"
+    type = "single_line_text_field"
+    name = "Kleur van de vakjes"
+    description = "Hex-kleur. Leeg = #FFFFFF."
+
+    [[extensions.settings.fields]]
+    key = "kleur_cijfers"
+    type = "single_line_text_field"
+    name = "Kleur van de cijfers"
+    description = "Hex-kleur. Leeg = #121212."
+
+    [[extensions.settings.fields]]
+    key = "hoeken"
+    type = "number_integer"
+    name = "Ronde hoeken (0 tot 20)"
+    description = "Leeg = 8. 0 = rechte hoeken."

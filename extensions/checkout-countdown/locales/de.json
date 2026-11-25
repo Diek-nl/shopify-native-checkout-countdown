@@ -1,0 +1,11 @@
+{
+  "kop": "Sale",
+  "eindigt": "endet in",
+  "dag": "T",
+  "dagen": "Tage",
+  "uren": "Std",
+  "minuten": "Min",
+  "seconden": "Sek",
+  "editorGeenEinde": "Countdown: 'Einde van de actie' in den Blockeinstellungen ausfüllen, zum Beispiel 2026-12-01T00:00:00+01:00.",
+  "editorVerborgen": "Countdown: gerade ausgeblendet (das Ende ist vorbei oder er erscheint erst in den letzten Stunden)."
+}

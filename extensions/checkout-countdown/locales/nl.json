@@ -1,0 +1,11 @@
+{
+  "kop": "Sale",
+  "eindigt": "eindigt over",
+  "dag": "d",
+  "dagen": "dagen",
+  "uren": "uur",
+  "minuten": "min",
+  "seconden": "sec",
+  "editorGeenEinde": "Aftelklok: vul 'Einde van de actie' in bij de blokinstellingen, bijvoorbeeld 2026-12-01T00:00:00+01:00.",
+  "editorVerborgen": "Aftelklok: nu verborgen (het einde is voorbij, of hij verschijnt pas in de laatste uren)."
+}

@@ -1,0 +1,11 @@
+{
+  "kop": "Soldes",
+  "eindigt": "se termine dans",
+  "dag": "j",
+  "dagen": "jours",
+  "uren": "h",
+  "minuten": "min",
+  "seconden": "sec",
+  "editorGeenEinde": "Compte à rebours : remplissez 'Einde van de actie' dans les réglages du bloc, par exemple 2026-12-01T00:00:00+01:00.",
+  "editorVerborgen": "Compte à rebours : masqué pour l'instant (la fin est passée, ou il n'apparaît que dans les dernières heures)."
+}

@@ -1,0 +1,28 @@
+{
+  "name": "shopify-native-checkout-countdown",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Aftelklok in de Shopify-checkout zonder countdown-app: één Checkout UI Extension die aftelt naar het einde van je actie, in je eigen kleuren.",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "extensions/*"
+  ],
+  "scripts": {
+    "dev": "shopify app dev",
+    "deploy": "shopify app deploy",
+    "config:link": "shopify app config link",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "shopify": "shopify"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.90.0"
+  },
+  "author": "Diek Thunnissen <diek@diek.nl> (https://diek.nl)",
+  "homepage": "https://diek.nl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Diek-nl/shopify-native-checkout-countdown.git"
+  }
+}
